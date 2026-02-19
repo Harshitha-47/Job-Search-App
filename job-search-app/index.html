@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HireSphere</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">HireSphere</div>
+    <div class="nav-right">
+        <button id="savedTab">Saved Jobs</button>
+        <button id="themeToggle">🌙</button>
+    </div>
+</header>
+
+<section class="hero">
+    <input type="text" id="searchInput" placeholder="Search jobs, skills, companies...">
+    <input type="text" id="locationInput" placeholder="Location">
+    <button id="filterToggle">Filters</button>
+    <button id="searchBtn" class="primary-btn">Search</button>
+</section>
+
+<div class="layout">
+    <aside class="sidebar" id="sidebar">
+        <h3>Filters</h3>
+
+        <div>
+            <label><input type="checkbox" value="full_time" class="typeFilter"> Full Time</label>
+            <label><input type="checkbox" value="contract" class="typeFilter"> Contract</label>
+            <label><input type="checkbox" value="internship" class="typeFilter"> Internship</label>
+        </div>
+
+        <div>
+            <label>Sort By</label>
+            <select id="sortSelect">
+                <option value="recent">Most Recent</option>
+                <option value="salary">Highest Salary</option>
+            </select>
+        </div>
+    </aside>
+
+    <main>
+        <h2 id="jobCount">0 Jobs Found</h2>
+        <div id="jobsContainer" class="jobs-grid"></div>
+    </main>
+</div>
+
+<div id="drawer" class="drawer">
+    <div class="drawer-content">
+        <span id="closeDrawer">&times;</span>
+        <div id="drawerBody"></div>
+    </div>
+</div>
+
+<button id="scrollTop">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
